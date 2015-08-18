@@ -8,6 +8,11 @@ fi
 
 ROOT="/home/ubuntu/hdd/downloads"
 
+if [ ! -d $ROOT ]
+then
+    mkdir -p $ROOT
+fi
+
 while read line
 do
     if [ ! -f "$ROOT/$line" ]
